@@ -1,6 +1,6 @@
 ```markdown
 # SearchIO
-![Application Screenshot](/hack.png)
+![Application Screenshot](/images/hack.png)
 
 ## Mission
 
