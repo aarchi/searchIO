@@ -1,0 +1,85 @@
+/* Admin Panel Container */
+.admin-container {
+    padding: 20px;
+    background-color: #f4f4f4; /* Use background color consistent with the website theme */
+    border-radius: 8px; /* Consistent border radius with website */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Consistent shadow with website */
+    max-width: 800px; /* Maximum width for the panel */
+    margin: 20px auto; /* Center the panel horizontally */
+    background: white; /* Panel background color */
+  }
+  
+  /* Header Styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    margin: 0;
+    color: #333; /* Use text color consistent with the website theme */
+  }
+  
+  .logout-button {
+    background-color: #007bff; /* Primary button color consistent with website theme */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #0056b3; /* Darker shade of primary color for hover effect */
+  }
+  
+  /* Description Styling */
+  .description {
+    margin-bottom: 20px;
+    color: #666; /* Text color consistent with website theme */
+    font-size: 16px; /* Font size consistent with website theme */
+  }
+  
+  /* Form Styling */
+  form {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Label color consistent with website theme */
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Ensure padding does not affect the width */
+  }
+  
+  button[type="submit"] {
+    background-color: #28a745; /* Use secondary button color consistent with website theme */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #218838; /* Darker shade of secondary color for hover effect */
+  }
+  .error-message {
+    color: red;
+    font-size: 0.9em;
+  }
+  

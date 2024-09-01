@@ -1,0 +1,113 @@
+<div class="container">
+    <!-- Existing Search Section -->
+    <div class="search-container">
+      <!-- Logo Placeholder -->
+      <img src="../assets/images/sio.png" alt="Logo" class="logo">
+      <div class="search-box">
+        <input type="text" id="search-input" [(ngModel)]="searchTerm" class="form-control" placeholder="Search..." (keypress)="handleKeyPress($event)">
+      </div>
+    </div>
+  
+    <!-- Admin Button -->
+    <button (click)="openLoginModal()" class="admin-button">Admin</button>
+  
+    <!-- Modal -->
+    <div *ngIf="showModal" class="modal-overlay">
+      <div class="modal-content">
+        <h2>Admin Login</h2>
+        <form (ngSubmit)="login()">
+          <label for="username">Username:</label>
+          <input type="text" id="username" [(ngModel)]="username" name="username" required>
+  
+          <label for="password">Password:</label>
+          <input type="password" id="password" [(ngModel)]="password" name="password" required>
+  
+          <button type="submit">Login</button>
+          <button type="button" (click)="closeLoginModal()">Cancel</button>
+  
+          <!-- Display login error message -->
+          <div *ngIf="loginErrorMessage" class="login-error">{{ loginErrorMessage }}</div>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Existing Search Section -->
+    <div class="search-container">
+      <!-- Your search input and results here -->
+    </div>
+  
+    <!-- Spinner -->
+    <div *ngIf="loading" class="lds-hourglass"></div>
+  
+    <!-- Error Message -->
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  
+    <div class="search-results" *ngIf="!loading && searchResponse && searchResponse.length">
+      <div *ngFor="let response of searchResponse" class="result-card">
+        <div class="card-body">
+          <!-- Display title and summary -->
+          <h3 class="card-title">{{ response.title }}</h3>
+          <div class="card-text" [innerHTML]="response.summary"></div>
+        </div>
+        <div class="url-list" *ngIf="response.urls && response.urls.length">
+          <p class="url-title">References:</p>
+          <ul class="url-items">
+            <li *ngFor="let url of response.urls">
+              <a href="{{ url }}" class="url-link" target="_blank">{{ url }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <hr>
+  
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- UBS Logo -->
+        <img src="../assets/images/ubs.png" alt="UBS Logo" class="footer-logo-ubs">
+  
+        <!-- Description -->
+        <p class="description">Our mission is to build a comprehensive search engine for UBS that integrates information from every source within the organization. By harnessing AI technology, we aim to streamline the search process, saving you valuable time and effort while providing precise and insightful results. Our goal is to create a powerful tool that simplifies access to critical information across UBS.</p>
+  
+        <!-- Feature Panels -->
+        <div class="feature-panels">
+            <div class="panel">
+              <img src="../assets/images/stackoverflow.png" alt="Stack Overflow Logo" class="feature-logo">
+              <p>Explore UBS-specific queries and answers on Stack Overflow. 
+              Search for programming insights and solutions tailored by UBS professionals.</p>
+            </div>
+            <div class="panel">
+              <img src="../assets/images/confluence.png" alt="Confluence Logo" class="feature-logo">
+              <p>Access a vast repository of application documentation on Confluence. 
+              Search through collaborative resources to find the information you need.</p>
+            </div>
+            <div class="panel">
+              <img src="../assets/images/gitlab.png" alt="Gitlab Logo" class="feature-logo">
+              <p>Search your GitLab projects, merge requests, and issues seamlessly. 
+              Manage your code and track project development efficiently.</p>
+            </div>
+            <div class="panel">
+              <img src="../assets/images/assist.png" alt="UBS Assist Logo" class="feature-logo">
+              <p>Search for any article within UBS Assist to get quick help and guidance. 
+              Tap into a wealth of knowledge curated by UBS teams.</p>
+            </div>
+            <div class="panel">
+              <img src="../assets/images/incident.png" alt="Incident Logo" class="feature-logo">
+              <p>Look up production issues with enriched information from various teams. 
+              Stay informed about incidents and their resolutions.</p>
+            </div>
+            <div class="panel">
+              <img src="../assets/images/openai.png" alt="OpenAI Logo" class="feature-logo">
+              <p>All searches across these platforms are powered by AI. 
+              Experience intelligent, fast, and accurate search results tailored for UBS.</p>
+            </div>
+          </div>
+          
+      </div>
+    </footer>
+  </div>
+  
