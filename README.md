@@ -185,9 +185,17 @@ To build both the backend and frontend:
 
 Feel free to fork the repository, make changes, and submit pull requests. Ensure your changes are well-tested and documented.
 
-## License
+## RUN
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+From the root directory you can just build the whole project using maven commands
+
+```bash
+mvn clean install
+```
+```bash
+#run spring boot project
+java -jar searchIOBackend-0.0.1-SNAPSHOT.jar
+```
 
 ## Contact
 
