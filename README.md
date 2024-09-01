@@ -17,7 +17,7 @@ We are using Nucleus for AI purposes to enhance search capabilities and provide 
 
 ## Project Structure
 
-```
+```bash
 root/
 ├── backend/ (Spring Boot application)
 ├── frontend/ (Angular application)
