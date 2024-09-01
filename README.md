@@ -1,5 +1,5 @@
 # SearchIO
-![Application Screenshot](/images/hack.PNG)
+![Application Screenshot](/images/hack.png)
 
 ```markdown
 
