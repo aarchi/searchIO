@@ -199,7 +199,5 @@ java -jar searchIOBackend-0.0.1-SNAPSHOT.jar
 
 ## Contact
 
-For any questions or support, please contact [Your Name] at [Your Email Address].
+For any questions or support, please contact Bikesh Kumar at bika.290391@gmail.com
 ```
-
-Replace `<repository-url>`, `[Your Name]`, and `[Your Email Address]` with the relevant information.
