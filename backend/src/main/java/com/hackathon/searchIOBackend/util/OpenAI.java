@@ -21,7 +21,7 @@ public class OpenAI {
 
     private static int MAX_RESPONSE_TOKENS = 1000; // Adjust as needed for the response
 
-    private static final String GPT_API_KEY = "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"; // Replace with your OpenAI API key
+    private static final String GPT_API_KEY = "gdfgfghfgfjhgfgfghf"; // Replace with your OpenAI API key
     private static final String GPT_API_URL = "https://api.openai.com/v1/chat/completions";
 
     public String truncateTextToFitTokenLimit(String text, int length) {
